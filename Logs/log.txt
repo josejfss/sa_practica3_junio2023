@@ -1,0 +1,24 @@
+2023-06-11 23:17:08 - cliente/solicitar_pedido: Hamburgue Torito del Puente|Jalapa, salida a monjas
+2023-06-11 23:17:12 - Restaurante/recibir_pedido: Hamburgue Torito del Puente|Jalapa, salida a monjas| orden_id generado: 45e27cb8-4d5b-411e-95e3-081ef6ec4402
+2023-06-11 23:17:22 - /repartidor/recibir_pedido: 45e27cb8-4d5b-411e-95e3-081ef6ec4402
+2023-06-11 23:17:30 - repartidor -> orden_id:45e27cb8-4d5b-411e-95e3-081ef6ec4402 pedido entregado con exito
+2023-06-11 23:20:45 - /restaurante/estado_pedido: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden despachada
+2023-06-11 23:20:43 - cliente/verificarOrdenRes: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden despachada
+2023-06-11 23:21:41 - /repartidor/estado_pedido: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden entregada
+2023-06-11 23:21:39 - cliente/verificar_orden_repartidor: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden entregada
+2023-06-11 23:21:51 - /repartidor/recibir_pedido: 45e27cb8-4d5b-411e-95e3-081ef6ec4402
+2023-06-11 23:21:59 - repartidor -> orden_id:45e27cb8-4d5b-411e-95e3-081ef6ec4402 pedido entregado con exito
+Esto es una prueba de logs
+2023-06-11 23:24:19 - Restaurante/recibir_pedido: Lomito azado|Zona 12| orden_id generado: e06a2fe2-85e3-465c-aa96-55f2014fc479
+2023-06-11 23:24:29 - /repartidor/recibir_pedido: e06a2fe2-85e3-465c-aa96-55f2014fc479
+2023-06-11 23:24:37 - repartidor -> orden_id:e06a2fe2-85e3-465c-aa96-55f2014fc479 pedido entregado con exito
+2023-06-11 23:24:42 - cliente/solicitar_pedido: Hamburgue Torito del Puente extra picante|Jalapa, salida a monjas
+2023-06-11 23:24:46 - Restaurante/recibir_pedido: Hamburgue Torito del Puente extra picante|Jalapa, salida a monjas| orden_id generado: faa66d0e-59e9-4982-859f-ae607cb1fe08
+2023-06-11 23:24:56 - /repartidor/recibir_pedido: faa66d0e-59e9-4982-859f-ae607cb1fe08
+2023-06-11 23:25:04 - repartidor -> orden_id:faa66d0e-59e9-4982-859f-ae607cb1fe08 pedido entregado con exito
+2023-06-11 23:25:33 - /restaurante/estado_pedido: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
+2023-06-11 23:25:31 - cliente/verificarOrdenRes: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
+2023-06-11 23:25:51 - /repartidor/estado_pedido: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
+2023-06-11 23:25:49 - cliente/verificar_orden_repartidor: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
+2023-06-11 23:26:11 - /repartidor/recibir_pedido: 45e27cb8-4d5b-411e-95e3-081ef6ec4402
+2023-06-11 23:26:19 - repartidor -> orden_id:45e27cb8-4d5b-411e-95e3-081ef6ec4402 pedido entregado con exito

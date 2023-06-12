@@ -1,0 +1,6 @@
+boto3==1.21.22
+botocore==1.24.22
+Flask==2.0.3
+Flask-Cors==3.0.10
+pymongo==4.3.3
+uuid==1.30
