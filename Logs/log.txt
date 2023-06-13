@@ -22,3 +22,32 @@ Esto es una prueba de logs
 2023-06-11 23:25:49 - cliente/verificar_orden_repartidor: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
 2023-06-11 23:26:11 - /repartidor/recibir_pedido: 45e27cb8-4d5b-411e-95e3-081ef6ec4402
 2023-06-11 23:26:19 - repartidor -> orden_id:45e27cb8-4d5b-411e-95e3-081ef6ec4402 pedido entregado con exito
+2023-06-12 16:19:03 - cliente/solicitar_pedido: Hamburgue Torito del Puente extra picante|Jalapa, salida a monjas
+2023-06-12 16:19:36 - Restaurante/recibir_pedido: Hamburgue Torito del Puente extra picante|Jalapa, salida a monjas| orden_id generado: 5f7df31a-ffb2-4e1e-ad11-49665bc44299
+2023-06-12 16:19:46 - /repartidor/recibir_pedido: 5f7df31a-ffb2-4e1e-ad11-49665bc44299
+2023-06-12 16:19:54 - repartidor -> orden_id:5f7df31a-ffb2-4e1e-ad11-49665bc44299 pedido entregado con exito
+2023-06-12 16:21:28 - cliente/solicitar_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas
+2023-06-12 16:21:50 - Restaurante/recibir_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas| orden_id generado: 76216b3c-49aa-4ec9-9611-33c36001bc44
+2023-06-12 16:22:00 - /repartidor/recibir_pedido: 76216b3c-49aa-4ec9-9611-33c36001bc44
+2023-06-12 16:22:08 - repartidor -> orden_id:76216b3c-49aa-4ec9-9611-33c36001bc44 pedido entregado con exito
+2023-06-12 16:23:11 - cliente/solicitar_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas
+2023-06-12 16:23:30 - Restaurante/recibir_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas| orden_id generado: 5937ad9e-014c-4ffa-bb39-38ba89c8d7d1
+2023-06-12 16:23:40 - /repartidor/recibir_pedido: 5937ad9e-014c-4ffa-bb39-38ba89c8d7d1
+2023-06-12 16:23:48 - repartidor -> orden_id:5937ad9e-014c-4ffa-bb39-38ba89c8d7d1 pedido entregado con exito
+2023-06-12 16:48:17 - cliente/solicitar_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas
+2023-06-12 16:49:04 - Restaurante/recibir_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas| orden_id generado: 617d5704-03fc-41f3-aabc-55ffbe100c44
+2023-06-12 16:49:14 - /repartidor/recibir_pedido: 617d5704-03fc-41f3-aabc-55ffbe100c44
+2023-06-12 16:49:22 - repartidor -> orden_id:617d5704-03fc-41f3-aabc-55ffbe100c44 pedido entregado con exito
+2023-06-12 16:50:57 - cliente/solicitar_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas
+2023-06-12 16:51:03 - Restaurante/recibir_pedido: Hamburgue pollo del Puente extra picante|Jalapa, salida a monjas| orden_id generado: a455d60f-75af-4027-9019-6ecb55b86d57
+2023-06-12 16:51:14 - /repartidor/recibir_pedido: a455d60f-75af-4027-9019-6ecb55b86d57
+2023-06-12 16:51:22 - repartidor -> orden_id:a455d60f-75af-4027-9019-6ecb55b86d57 pedido entregado con exito
+2023-06-12 18:31:04 - cliente/verificar_orden_repartidor: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
+2023-06-12 18:39:47 - cliente/verificarOrdenRes: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
+2023-06-12 18:40:04 - cliente/verificar_orden_repartidor: orden_id: 45e27cb8-4d5b-411e-95e3-081ef6ec4402 - Orden en proceso
+2023-06-12 18:58:02 - cliente/solicitar_pedido: Alitas en barbaco|USAC
+2023-06-12 18:58:08 - Restaurante/recibir_pedido: Alitas en barbaco|USAC| orden_id generado: 8ccf0665-9811-4dac-9645-a734ae7e43ba
+2023-06-12 19:00:46 - cliente/solicitar_pedido: Alitas en barbaco|USAC
+2023-06-12 19:00:52 - Restaurante/recibir_pedido: Alitas en barbaco|USAC| orden_id generado: 2462ce84-b4c4-4096-93a7-eb955348ff01
+2023-06-12 19:01:06 - /repartidor/recibir_pedido: 2462ce84-b4c4-4096-93a7-eb955348ff01
+2023-06-12 19:01:17 - repartidor -> orden_id:2462ce84-b4c4-4096-93a7-eb955348ff01 pedido entregado con exito

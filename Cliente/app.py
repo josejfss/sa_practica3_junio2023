@@ -21,15 +21,21 @@ def verificarRep():
     if orden_id:
         now = datetime.datetime.now()
         fecha_tiempo = now.strftime("%Y-%m-%d %H:%M:%S")
-        response = requests.post('http://localhost:4002/repartidor/estado_pedido', data=request.form)
+        
+        response = requests.post(
+            'http://localhost:4004/ESB/estado_pedido_repartidor', 
+            data =request.form 
+            )
+        
+        
         json = response.json()
         elemento = json.get('message')
-        form_data = {
-            'texto': fecha_tiempo + ' - cliente/verificar_orden_repartidor: ' + 'orden_id: ' + orden_id + ' - ' + elemento 
-        }
+
         response_log = requests.post(
-            'http://localhost:4001/logs/guardar_info',
-             data = form_data
+            'http://localhost:4004/ESB/guardar_info',
+             data = {
+                'texto': fecha_tiempo + ' - cliente/verificar_orden_repartidor: ' + 'orden_id: ' + orden_id + ' - ' + elemento 
+             }
              )
         
         response = jsonify({'message': elemento, 'status': 200})
@@ -54,16 +60,16 @@ def verificar():
         fecha_tiempo = now.strftime("%Y-%m-%d %H:%M:%S")
        
         response = requests.post(
-            'http://localhost:4003/restaurante/estado_pedido', 
+            'http://localhost:4004/ESB/estado_pedido_restaurante', 
             data = request.form
             )
         
         json = response.json()
-        #elemento = response.json().message
-        form_data = {
-            'texto': fecha_tiempo + ' - cliente/verificarOrdenRes: ' + 'orden_id: ' + orden_id + ' - ' + json.get('message') 
-        }
-        response_log = requests.post('http://localhost:4001/logs/guardar_info', data=form_data)
+
+        response_log = requests.post('http://localhost:4004/ESB/guardar_info',
+                                     data = {
+                                         'texto': fecha_tiempo + ' - cliente/verificarOrdenRes: ' + 'orden_id: ' + orden_id + ' - ' + json.get('message')   
+                                     })
         
         response = jsonify({'message': json.get('message') , 'status': 200})
         response.status_code = 200
@@ -86,17 +92,16 @@ def solicitar_p():
     if pedido:
         now = datetime.datetime.now()
         fecha_tiempo = now.strftime("%Y-%m-%d %H:%M:%S")
-        form_data = {
-            'texto': fecha_tiempo + ' - cliente/solicitar_pedido: ' + pedido + '|' + direccion
-        }
-        response_log = requests.post(
-            'http://localhost:4001/logs/guardar_info', 
-            data = form_data
-            )
-        
+
+
         response = requests.post(
-            'http://localhost:4003/restaurante/recibir_pedido', 
-            data = request.form)
+            'http://localhost:4004/ESB/recibir_pedido_cliente',
+            data = {
+                'log':  fecha_tiempo + ' - cliente/solicitar_pedido: ' + pedido + '|' + direccion,
+                'pedido': pedido,
+                'direccion': direccion
+                }
+        )
         
         
         if response.status_code != 200:

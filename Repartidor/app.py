@@ -34,10 +34,11 @@ def estado_pedido():
         fecha_tiempo = now.strftime("%Y-%m-%d %H:%M:%S")
         lista = ['Orden en proceso', 'Orden entregada', 'Orden en proceso', 'Orden entregada', 'Orden en proceso']
         elemento = random.choice(lista)
-        form_data = {
+
+
+        response_log = requests.post('http://localhost:4004/ESB/guardar_info', data={
             'texto': fecha_tiempo + ' - /repartidor/estado_pedido: ' + 'orden_id: ' + orden_id + ' - ' + elemento 
-        }
-        response_log = requests.post('http://localhost:4001/logs/guardar_info', data=form_data)
+        })
         
         response = jsonify({'message': elemento, 'status': 200})
         response.status_code = 200
@@ -51,13 +52,12 @@ def guardar_log():
     if orden_id:
         now = datetime.datetime.now()
         fecha_tiempo = now.strftime("%Y-%m-%d %H:%M:%S")
-        form_data = {
-            'texto': fecha_tiempo + ' - /repartidor/recibir_pedido: ' + orden_id
-        }
 
         response_log = requests.post(
-            'http://localhost:4001/logs/guardar_info', 
-            data = form_data)
+            'http://localhost:4004/ESB/guardar_info', 
+            data = {
+                'texto': fecha_tiempo + ' - /repartidor/recibir_pedido: ' + orden_id
+            })
         
         t = threading.Thread(target=temporizador, args=(0.1,orden_id,))
         t.start()
@@ -75,12 +75,12 @@ def temporizador(tiempo_en_minutos,orden_id):
     time.sleep(tiempo_en_segundos)
     now = datetime.datetime.now()
     fecha_tiempo = now.strftime("%Y-%m-%d %H:%M:%S")
-    form_data = {
-        'texto': fecha_tiempo + ' - repartidor -> orden_id:' + orden_id + ' pedido entregado con exito'
-    }
+
     response_log = requests.post(
-        'http://localhost:4001/logs/guardar_info',
-         data = form_data 
+        'http://localhost:4004/ESB/guardar_info',
+         data = {
+             'texto': fecha_tiempo + ' - repartidor -> orden_id:' + orden_id + ' pedido entregado con exito'
+         } 
          )
     print("¡El temporizador ha terminado!")
 if __name__ == '__main__':
